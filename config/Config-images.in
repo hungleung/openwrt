@@ -226,7 +226,7 @@ menu "Target Images"
 	config GRUB_TIMEOUT
 		string "Seconds to wait before booting the default entry"
 		depends on GRUB_IMAGES
-		default "5"
+		default "0"
 		help
 		  If you don't know, 5 seconds is a reasonable default.
 
@@ -251,7 +251,7 @@ menu "Target Images"
 	config TARGET_IMAGES_GZIP
 		bool "GZip images"
 		depends on TARGET_IMAGES_PAD || TARGET_ROOTFS_EXT4FS || TARGET_x86
-		default y
+		default n
 
 	comment "Image Options"
 
