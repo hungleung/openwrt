@@ -141,7 +141,7 @@ menu "Target Images"
 
 	menuconfig TARGET_ROOTFS_SQUASHFS
 		bool "squashfs"
-		default y if USES_SQUASHFS
+		default n if USES_SQUASHFS
 		help
 		  Build a squashfs-lzma root filesystem.
 

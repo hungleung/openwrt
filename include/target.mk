@@ -13,10 +13,10 @@ __target_inc=1
 DEVICE_TYPE?=router
 
 # Default packages - the really basic set
-DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd wget curl ipset-lists pdnsd-alt vlmcsd \
-luci-ssl-openssl luci-app-upnp luci-app-ddns luci-app-wol luci-app-ssr-pro luci-app-ssrserver-python luci-app-udpxy luci-app-vlmcsd
+DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd wget curl bind-dig vlmcsd shadowsocksr-libev ip-full luci-app-nut \
+luci-ssl-openssl luci-app-upnp luci-app-ddns luci-app-wol luci-app-shadowsocksr luci-app-ssrserver-python luci-app-udpxy luci-app-vlmcsd ChinaDNS dnsmasq-extra
 # For nas targets
-DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
+# DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
 # For router targets
 DEFAULT_PACKAGES.router:=dnsmasq-full iptables ppp ppp-mod-pppoe firewall kmod-ipt-offload
 DEFAULT_PACKAGES.bootloader:=
