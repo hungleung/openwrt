@@ -13,7 +13,7 @@ __target_inc=1
 DEVICE_TYPE?=router
 
 # Default packages - the really basic set
-DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd wget curl bind-dig vlmcsd shadowsocksr-libev ip-full luci-app-nut \
+DEFAULT_PACKAGES:=base-files libc libgcc busybox dropbear mtd uci opkg netifd fstools uclient-fetch logd wget curl bind-dig vlmcsd shadowsocksr-libev \
 luci-ssl-openssl luci-app-upnp luci-app-ddns luci-app-wol luci-app-shadowsocksr luci-app-ssrserver-python luci-app-udpxy luci-app-vlmcsd ChinaDNS dnsmasq-extra
 # For nas targets
 # DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
