@@ -18,7 +18,7 @@ luci-ssl-openssl luci-app-upnp luci-app-ddns luci-app-wol luci-app-ssrserver-pyt
 # For nas targets
 # DEFAULT_PACKAGES.nas:=block-mount fdisk lsblk mdadm
 # For router targets
-DEFAULT_PACKAGES.router:=dnsmasq-full iptables ppp ppp-mod-pppoe firewall kmod-ipt-offload
+DEFAULT_PACKAGES.router:=dnsmasq-full iptables ppp ppp-mod-pppoe firewall kmod-ipt-offload luci-proto-ipv6 ip6tables kmod-ipt-nat6 odhcpd-ipv6only odhcp6c
 DEFAULT_PACKAGES.bootloader:=
 
 ifneq ($(DUMP),)
