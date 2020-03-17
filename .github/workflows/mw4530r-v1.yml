@@ -60,13 +60,10 @@ jobs:
           
       - name: third-party-package
         run: |
-          cd package
-          mkdir openwrt-packages
-          cd openwrt-packages
-          git clone https://github.com/mchome/openwrt-vlmcsd.git
-          git clone https://github.com/mchome/luci-app-vlmcsd.git
-          git clone https://github.com/kuoruan/openwrt-v2ray.git
-          git clone https://github.com/kuoruan/luci-app-v2ray.git
+          git clone https://github.com/mchome/openwrt-vlmcsd.git ./package
+          git clone https://github.com/mchome/luci-app-vlmcsd.git ./package
+          git clone https://github.com/kuoruan/openwrt-v2ray.git ./package
+          git clone https://github.com/kuoruan/luci-app-v2ray.git ./package
 
       - name: Update feeds
         run: |
@@ -164,7 +161,13 @@ jobs:
           CONFIG_PACKAGE_luci-app-upnp=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
           CONFIG_PACKAGE_luci-app-v2ray=y
-          #CONFIG_PACKAGE_luci-app-kodexplorer=y
+          CONFIG_PACKAGE_luci-ssl-openssl=y
+          CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-v2ray-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
           #CONFIG_PACKAGE_luci-app-minidlna=y
           #CONFIG_PACKAGE_luci-app-openvpn=y
           #CONFIG_PACKAGE_luci-app-openvpn-server=y
