@@ -159,7 +159,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ddns=y
           CONFIG_PACKAGE_luci-app-udpxy=y
           CONFIG_PACKAGE_luci-app-upnp=y
-          #CONFIG_PACKAGE_luci-app-vlmcsd=y
+          CONFIG_PACKAGE_luci-app-vlmcsd=y
           #CONFIG_PACKAGE_luci-app-v2ray=y
           CONFIG_PACKAGE_luci-ssl-openssl=y
           CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
@@ -167,7 +167,7 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
           #CONFIG_PACKAGE_luci-i18n-v2ray-zh-cn=y
-          #CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+          CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
           #CONFIG_PACKAGE_luci-app-minidlna=y
           #CONFIG_PACKAGE_luci-app-openvpn=y
           #CONFIG_PACKAGE_luci-app-openvpn-server=y
@@ -200,7 +200,7 @@ jobs:
           #CONFIG_PACKAGE_libustream-openssl=y
           #CONFIG_PACKAGE_v2ray=y
           CONFIG_PACKAGE_wget=y
-          #CONFIG_PACKAGE_vlmcsd=y
+          CONFIG_PACKAGE_vlmcsd=y
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
