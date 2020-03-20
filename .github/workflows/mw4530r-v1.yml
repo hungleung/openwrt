@@ -64,6 +64,11 @@ jobs:
           git clone https://github.com/mchome/luci-app-vlmcsd.git ./package/luci-app-vlmcsd
           git clone https://github.com/kuoruan/openwrt-v2ray.git ./package/openwrt-v2ray
           git clone https://github.com/kuoruan/luci-app-v2ray.git ./package/luci-app-v2ray
+          git clone https://github.com/chenhw2/luci-app-shadowsocksr.git ./package/luci-app-shadowsocksr
+          git clone https://github.com/shadowsocks/openwrt-feeds.git ./package/openwrt-feeds
+          git clone https://github.com/chenhw2/openwrt-shadowsocksr.git ./package/openwrt-shadowsocksr
+          git clone https://github.com/chenhw2/openwrt-dnsmasq-extra.git ./package/openwrt-dnsmasq-extra
+          
 
       - name: Update feeds
         run: |
@@ -160,14 +165,14 @@ jobs:
           CONFIG_PACKAGE_luci-app-udpxy=y
           CONFIG_PACKAGE_luci-app-upnp=y
           CONFIG_PACKAGE_luci-app-vlmcsd=y
-          CONFIG_PACKAGE_luci-app-v2ray=y
+          CONFIG_PACKAGE_luci-app-shadowsocksr=y
           CONFIG_PACKAGE_luci-ssl-openssl=y
-          CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-v2ray-zh-cn=y
-          CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-v2ray-zh-cn=y
+          #CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
           #CONFIG_PACKAGE_luci-app-minidlna=y
           #CONFIG_PACKAGE_luci-app-openvpn=y
           #CONFIG_PACKAGE_luci-app-openvpn-server=y
@@ -197,10 +202,13 @@ jobs:
           CONFIG_PACKAGE_htop=y
           CONFIG_PACKAGE_acme-dnsapi=y
           CONFIG_PACKAGE_bind-dig=y
-          CONFIG_PACKAGE_libustream-openssl=y
-          #CONFIG_PACKAGE_v2ray=y
+          CONFIG_PACKAGE_iptables-mod-tproxy=y
+          CONFIG_PACKAGE_ipset=y
           CONFIG_PACKAGE_wget=y
           CONFIG_PACKAGE_vlmcsd=y
+          CONFIG_PACKAGE_shadowsocksr-libev=y
+          CONFIG_PACKAGE_dnsmasq-extra=y
+          CONFIG_PACKAGE_adguard-home=y
           EOF
 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
